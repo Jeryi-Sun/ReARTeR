@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=4,5,6,7 llamafactory-cli train train_lora/llama3_lora_kto.yaml

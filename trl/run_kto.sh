@@ -1,0 +1,21 @@
+deepspeed --master_port 6000 examples/scripts/kto.py \
+    --dataset_name ./exp_data/ \
+    --model_name_or_path ./meta-llama/Llama-3.2-3B-Instruct/ \
+    --per_device_train_batch_size 2 \
+    --num_train_epochs 3 \
+    --learning_rate 5e-7 \
+    --lr_scheduler_type=cosine \
+    --gradient_accumulation_steps 1 \
+    --logging_steps 10 \
+    --eval_steps 500 \
+    --output_dir ./LLMs/kto-aligned-model-lora \
+    --warmup_ratio 0.1 \
+    --fp16 \
+    --logging_first_step \
+    --use_peft \
+    --lora_target_modules=all-linear \
+    --lora_r=16 \
+    --lora_alpha=16 \
+    --max_length  40 \
+    --max_prompt_length 20 \
+    --deepspeed examples/accelerate_configs/ds2.json \

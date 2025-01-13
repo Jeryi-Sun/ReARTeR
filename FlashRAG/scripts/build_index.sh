@@ -1,0 +1,11 @@
+python -m flashrag.retriever.index_builder \
+    --retrieval_method bge \
+    --model_path /share/sunzhongxiang/flashrag_data/LLMs/bge-base-en-v1.5/ \
+    --corpus_path /share/sunzhongxiang/flashrag_data/retrieval-corpus/wiki-18.jsonl \
+    --save_dir /share/sunzhongxiang/flashrag_data/retrieval-corpus/index/ \
+    --use_fp16 \
+    --max_length 512 \
+    --batch_size 256 \
+    --pooling_method mean \
+    --faiss_type Flat \
+    --save_embedding
