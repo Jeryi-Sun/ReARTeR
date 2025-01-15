@@ -72,7 +72,7 @@ framework: openai # inference frame work of LLM, supporting: 'hf','vllm','fschat
 generator_model: "/new_disk3/zhongxiang_sun/code/LLMs/Llama-3.1-8B-Instruct" #"" #"gpt-4o-mini-2024-07-18" # name or path of the generator model
 # setting for openai model, only valid in openai framework
 openai_setting:
-  api_key:  abc123 #sk-MKaSQPD7q85FT2UuswoSE7dnNyOrtR7CMwkxCCp6e8uir3OZ #sk-MKaSQPD7q85FT2UuswoSE7dnNyOrtR7CMwkxCCp6e8uir3OZ
+  api_key:  abc123 
   base_url: http://localhost:8000/v1 #http://localhost:8000/v1 #https://api2.aigcbest.top/v1/
   timeout: 60
 
@@ -82,7 +82,7 @@ prm_lora_path: "/new_disk3/zhongxiang_sun/code/LLMs/Skywork-Reward-Llama-3.1-8B-
 explaner_model_path: exp_model
 exp_framework: openai
 exp_openai_setting:
-  api_key:  abc123 #sk-MKaSQPD7q85FT2UuswoSE7dnNyOrtR7CMwkxCCp6e8uir3OZ
+  api_key:  abc123 
   base_url: http://localhost:8001/v1 #https://api2.aigcbest.top/v1/
   timeout: 60
 
