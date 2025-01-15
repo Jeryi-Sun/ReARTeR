@@ -41,7 +41,7 @@ for filename in os.listdir(directory_path):
 final_data = []
 train_reward_data = []
 rft_data = []
-for (question, partial_answer), info in merged_data.items():
+for (question, partial_answer), info in merged_data:
     avg_mc_score = sum(info['mc_score']) / len(info['mc_score'])  # Average mc_score
     user_prompt = REASON_PROMPT+f"#\nQuestion: {question}"
     reason_data_list = []

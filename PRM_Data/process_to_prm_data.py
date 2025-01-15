@@ -36,7 +36,7 @@ for filename in os.listdir(directory_path):
 # Post-process to calculate the average mc_score and format data
 final_data = []
 train_reward_data = []
-for question, partial_answer, info in merged_data.items():
+for question, partial_answer, info in merged_data:
     avg_mc_score = info['mc_score']  # Average mc_score
     final_entry = {
         'question': question,
